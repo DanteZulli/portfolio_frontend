@@ -1,13 +1,13 @@
-package com.portfolio.dantezulli;
+package com.portfolio.dz;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DantezulliApplication {
+public class DzApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DantezulliApplication.class, args);
+		SpringApplication.run(DzApplication.class, args);
 	}
 
 }

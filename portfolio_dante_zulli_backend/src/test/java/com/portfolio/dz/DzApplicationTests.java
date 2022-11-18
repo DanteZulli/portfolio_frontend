@@ -1,10 +1,10 @@
-package com.portfolio.dantezulli;
+package com.portfolio.dz;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DantezulliApplicationTests {
+class DzApplicationTests {
 
 	@Test
 	void contextLoads() {
