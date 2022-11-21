@@ -19,8 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author dante
  */
 @RestController
-//Evitar CORS
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PersonaController {
     @Autowired IPersonaService IPersonaService;
     
@@ -45,6 +44,11 @@ public class PersonaController {
         persona.setApellido(nuevoApellido);
         IPersonaService.savePersona(persona);
         return persona;
+    }
+    
+    @GetMapping("personas/traer/perfil")
+    public Persona findPersona(){
+        return IPersonaService.findPersona((long)1);
     }
     
 }
