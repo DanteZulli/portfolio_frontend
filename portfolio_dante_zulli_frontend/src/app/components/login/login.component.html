@@ -28,13 +28,15 @@
                 ></path>
               </svg>
             </div>
-            <form class="text-center" method="post">
+            <form class="text-center" #f="ngForm" (ngSubmit)="onLogin()" novalidate>
               <div class="mb-3">
                 <input
                   class="form-control"
                   type="email"
-                  name="email"
+                  name="nombreUsuario"
+                  id="nombreUsuario"
                   placeholder="Usuario"
+                  [(ngModel)]="nombreUsuario" required
                 />
               </div>
               <div class="mb-3">
@@ -42,7 +44,9 @@
                   class="form-control"
                   type="password"
                   name="password"
+                  id="password"
                   placeholder="Contraseña"
+                  [(ngModel)]="password" required
                 />
               </div>
               <div class="mb-3">
