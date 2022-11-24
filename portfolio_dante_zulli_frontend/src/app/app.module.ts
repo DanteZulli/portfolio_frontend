@@ -14,6 +14,13 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { interceptorProvider } from './service/interceptor-service';
+import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
+import { MisEstudiosComponent } from './components/mis-estudios/mis-estudios.component';
+import { MiExperienciaComponent } from './components/mi-experiencia/mi-experiencia.component';
+import { MisHabilidadesComponent } from './components/mis-habilidades/mis-habilidades.component';
+import { ContactoAnuncioComponent } from './components/contacto-anuncio/contacto-anuncio.component';
+import { MisProyectosComponent } from './components/mis-proyectos/mis-proyectos.component';
+import { ContactoFormularioComponent } from './components/contacto-formulario/contacto-formulario.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +30,14 @@ import { interceptorProvider } from './service/interceptor-service';
     MainComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    SobreMiComponent,
+    MisEstudiosComponent,
+    MiExperienciaComponent,
+    MisHabilidadesComponent,
+    ContactoAnuncioComponent,
+    MisProyectosComponent,
+    ContactoFormularioComponent
   ],
   imports: [
     BrowserModule,
