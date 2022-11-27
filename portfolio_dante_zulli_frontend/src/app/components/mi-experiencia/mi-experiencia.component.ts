@@ -27,5 +27,13 @@ export class MiExperienciaComponent implements OnInit  {
       })
     }
 
+    delete(id: number): void {
+      this.experienciaService.delete(id).subscribe(data => {
+        this.cargarExperiencia();
+      }, err =>{
+        alert("No se pudo borrar la experiencia");
+      }
+      )
+    }
 }
 
