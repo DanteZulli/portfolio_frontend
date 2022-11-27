@@ -1,8 +1,9 @@
 <section class="py-4">
   <div class="container">
     <h2 class="text-center">Mi experiencia</h2>
+    <a class="btn btn-dark btn-lg text-uppercase fw-bold text-center" role="button" href="/new-experiencia" *ngIf="isLogged" style="display: inline;">agregar experiencia&nbsp;<i class="fas fa-plus"></i></a>
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 py-4 projects">
-      <div class="col">
+      <div class="col" *ngFor="let Experiencia of exp">
         <div class="card">
           <div class="card-body">
             <img
@@ -15,140 +16,11 @@
               "
               src="assets/img/work-from-home.png"
             />
-            <h4 class="text-dark card-title">Experiencia de Ejemplo</h4>
-            <h6 class="text-muted card-subtitle mb-2">
-              Nombre de la empresa
-            </h6>
+            <h4 class="text-dark card-title">{{ Experiencia.nombreExp }}</h4>
             <p class="text-dark card-text">
-              Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
-              justo odio, dapibus ac facilisis in, egestas eget quam.
-              Donec id elit non mi porta gravida at eget metus.
+              {{ Experiencia.descripcionExp }}
             </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-body">
-            <img
-              style="
-                width: 5rem;
-                height: 5rem;
-                border-radius: 100%;
-                border-style: solid;
-                border-color: var(--bs-dark);
-              "
-              src="assets/img/work-from-home.png"
-            />
-            <h4 class="text-dark card-title">Experiencia de Ejemplo</h4>
-            <h6 class="text-muted card-subtitle mb-2">
-              Nombre de la empresa
-            </h6>
-            <p class="text-dark card-text">
-              Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
-              justo odio, dapibus ac facilisis in, egestas eget quam.
-              Donec id elit non mi porta gravida at eget metus.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-body">
-            <img
-              style="
-                width: 5rem;
-                height: 5rem;
-                border-radius: 100%;
-                border-style: solid;
-                border-color: var(--bs-dark);
-              "
-              src="assets/img/work-from-home.png"
-            />
-            <h4 class="text-dark card-title">Experiencia de Ejemplo</h4>
-            <h6 class="text-muted card-subtitle mb-2">
-              Nombre de la empresa
-            </h6>
-            <p class="text-dark card-text">
-              Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
-              justo odio, dapibus ac facilisis in, egestas eget quam.
-              Donec id elit non mi porta gravida at eget metus.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-body">
-            <img
-              style="
-                width: 5rem;
-                height: 5rem;
-                border-radius: 100%;
-                border-style: solid;
-                border-color: var(--bs-dark);
-              "
-              src="assets/img/work-from-home.png"
-            />
-            <h4 class="text-dark card-title">Experiencia de Ejemplo</h4>
-            <h6 class="text-muted card-subtitle mb-2">
-              Nombre de la empresa
-            </h6>
-            <p class="text-dark card-text">
-              Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
-              justo odio, dapibus ac facilisis in, egestas eget quam.
-              Donec id elit non mi porta gravida at eget metus.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-body">
-            <img
-              style="
-                width: 5rem;
-                height: 5rem;
-                border-radius: 100%;
-                border-style: solid;
-                border-color: var(--bs-dark);
-              "
-              src="assets/img/work-from-home.png"
-            />
-            <h4 class="text-dark card-title">Experiencia de Ejemplo</h4>
-            <h6 class="text-muted card-subtitle mb-2">
-              Nombre de la empresa
-            </h6>
-            <p class="text-dark card-text">
-              Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
-              justo odio, dapibus ac facilisis in, egestas eget quam.
-              Donec id elit non mi porta gravida at eget metus.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-body">
-            <img
-              style="
-                width: 5rem;
-                height: 5rem;
-                border-radius: 100%;
-                border-style: solid;
-                border-color: var(--bs-dark);
-              "
-              src="assets/img/work-from-home.png"
-            />
-            <h4 class="text-dark card-title">Experiencia de Ejemplo</h4>
-            <h6 class="text-muted card-subtitle mb-2">
-              Nombre de la empresa
-            </h6>
-            <p class="text-dark card-text">
-              Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
-              justo odio, dapibus ac facilisis in, egestas eget quam.
-              Donec id elit non mi porta gravida at eget metus.
-            </p>
+            <a class="card-link" href="/edit-experiencia/{{Experiencia.id}}" *ngIf="isLogged"><i class="fas fa-pencil-alt"></i>Editar</a><a class="card-link" href="#" *ngIf="isLogged"><i class="fas fa-skull-crossbones"></i>Eliminar</a>
           </div>
         </div>
       </div>

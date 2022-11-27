@@ -39,7 +39,15 @@ public class ExperienciaController {
         List<Experiencia> list = impExperienciaService.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
-
+    
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Experiencia> getById(@PathVariable("id") int id){
+        if(!impExperienciaService.existsById(id)){
+            return new ResponseEntity(new Mensaje("La experiencia no existe."), HttpStatus.NOT_FOUND);
+        }
+        Experiencia experiencia = impExperienciaService.getOne(id).get();
+        return new ResponseEntity(experiencia, HttpStatus.OK);
+    }
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoExperiencia dtoexp) {
         if (StringUtils.isBlank(dtoexp.getNombreExp())) {

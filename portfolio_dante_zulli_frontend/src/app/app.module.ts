@@ -21,6 +21,8 @@ import { MisHabilidadesComponent } from './components/mis-habilidades/mis-habili
 import { ContactoAnuncioComponent } from './components/contacto-anuncio/contacto-anuncio.component';
 import { MisProyectosComponent } from './components/mis-proyectos/mis-proyectos.component';
 import { ContactoFormularioComponent } from './components/contacto-formulario/contacto-formulario.component';
+import { NewExperienciaComponent } from './components/mi-experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/mi-experiencia/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { ContactoFormularioComponent } from './components/contacto-formulario/co
     MisHabilidadesComponent,
     ContactoAnuncioComponent,
     MisProyectosComponent,
-    ContactoFormularioComponent
+    ContactoFormularioComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent
   ],
   imports: [
     BrowserModule,
