@@ -20,7 +20,7 @@
             <p class="text-dark card-text">
               {{ Experiencia.descripcionExp }}
             </p>
-            <a class="card-link" href="/edit-experiencia/{{Experiencia.id}}" *ngIf="isLogged"><i class="fas fa-pencil-alt"></i>Editar</a>
+            <a class="card-link" role="button" routerLink="/edit-experiencia/{{Experiencia.id}}" *ngIf="isLogged"><i class="fas fa-pencil-alt"></i>Editar</a>
             <a class="card-link" (click)="delete(Experiencia.id)" *ngIf="isLogged"><i class="fas fa-skull-crossbones"></i>Eliminar</a>
           </div>
         </div>
