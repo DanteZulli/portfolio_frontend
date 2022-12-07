@@ -1,7 +1,7 @@
 <section class="py-4">
   <div class="container">
     <h2 class="text-center">Mi experiencia</h2>
-    <a class="btn btn-dark btn-lg text-uppercase fw-bold text-center" role="button" href="/new-experiencia" *ngIf="isLogged" style="display: inline;">agregar experiencia&nbsp;<i class="fas fa-plus"></i></a>
+    <a class="btn btn-dark btn-lg text-uppercase fw-bold text-center" role="button" routerLink="/new-experiencia" *ngIf="isLogged" style="display: inline;">agregar experiencia&nbsp;<i class="fas fa-plus"></i></a>
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 py-4 projects">
       <div class="col" *ngFor="let Experiencia of exp">
         <div class="card">

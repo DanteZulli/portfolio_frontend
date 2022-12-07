@@ -4,23 +4,25 @@
     <div class="timeline">
       <div class="container py-5">
         <h2 class="titulo">Mis estudios</h2>
+        <a class="btn btn-dark btn-lg text-uppercase fw-bold text-center" role="button" routerLink="/new-educacion" *ngIf="isLogged" style="display: inline;">agregar educación&nbsp;<i class="fas fa-plus"></i></a>
         <div class="row">
-          <div class="col-lg-7 mx-auto">
+          <div class="col-lg-7 mx-auto" *ngFor="let Educacion of educacion">
             <br />
             <!-- Timeline -->
             <ul class="timeline">
               <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
                 <div class="timeline-arrow"></div>
                 <h2 class="h5 mb-0 texto-oscuro">
-                  Escuela Educación Secundaria Técnica N°2
+                  {{ Educacion.nombreEdu }}
                 </h2>
                 <span class="small text-gray"
-                  ><i class="fa fa-clock-o mr-1"></i>Egresado 2022</span
+                  ><i class="fa fa-clock-o mr-1"></i>{{ Educacion.fechaEdu }}</span
                 >
                 <p class="text-small texto-oscuro mt-2 font-weight-light">
-                  Titulación: Técnico en Programación<br />Lavalle 801,
-                  Temperley, Provincia de Buenos Aires
+                  {{ Educacion.descripcionEdu }}
                 </p>
+                <a class="card-link" role="button" routerLink="/edit-educacion/{{Educacion.id}}" *ngIf="isLogged"><i class="fas fa-pencil-alt"></i>Editar</a>
+                <a class="card-link" (click)="eliminarEducacion(Educacion.id)" *ngIf="isLogged"><i class="fas fa-skull-crossbones"></i>Eliminar</a>
               </li>
             </ul>
             <!-- End -->

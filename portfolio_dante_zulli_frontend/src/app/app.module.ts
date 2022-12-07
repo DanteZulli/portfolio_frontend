@@ -23,6 +23,8 @@ import { MisProyectosComponent } from './components/mis-proyectos/mis-proyectos.
 import { ContactoFormularioComponent } from './components/contacto-formulario/contacto-formulario.component';
 import { NewExperienciaComponent } from './components/mi-experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/mi-experiencia/edit-experiencia.component';
+import { NewEducacionComponent } from './components/mis-estudios/new-educacion.component';
+import { EditEducacionComponent } from './components/mis-estudios/edit-educacion.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { EditExperienciaComponent } from './components/mi-experiencia/edit-exper
     MisProyectosComponent,
     ContactoFormularioComponent,
     NewExperienciaComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent
   ],
   imports: [
     BrowserModule,
