@@ -1,65 +1,20 @@
 <section class="py-4">
   <div class="container">
     <h2 class="text-center">Mis habilidades</h2>
+    <a class="btn btn-dark btn-lg text-uppercase fw-bold text-center" role="button" routerLink="/new-habilidades" *ngIf="isLogged" style="display: inline;">agregar habilidades&nbsp;<i class="fas fa-plus"></i></a>
     <!-- Start: Progress Bars Chart -->
-    <div class="progress-div">
-      <h5>Habilidades "Duras"</h5>
-      <div class="progress-title">CSS</div>
+    <div class="progress-div" *ngFor="let Habilidad of hab">
+      <div class="progress-title">{{ Habilidad.nombre }}</div>
       <div class="progress">
         <div
           class="progress-bar bar"
           role="progressbar"
-          style="width: 75%"
+          style="width: 50%;"
         ></div>
-        <span style="color: black; margin: auto">75%</span>
+        <span style="color: black; margin: auto">{{ Habilidad.porcentaje }}%</span>
       </div>
-      <div class="progress-title">HTML</div>
-      <div class="progress">
-        <div
-          class="progress-bar bar"
-          role="progressbar"
-          style="width: 90%"
-        ></div>
-        <span style="color: black; margin: auto">90%</span>
-      </div>
-      <div class="progress-title">Java Script</div>
-      <div class="progress">
-        <div
-          class="progress-bar bar"
-          role="progressbar"
-          style="width: 75%"
-        ></div>
-        <span style="color: black; margin: auto">65%</span>
-      </div>
-      <br />
-      <h5>Habilidades "Blandas"</h5>
-      <div class="progress-title">Comunicación</div>
-      <div class="progress">
-        <div
-          class="progress-bar bar"
-          role="progressbar"
-          style="width: 75%"
-        ></div>
-        <span style="color: black; margin: auto">75%</span>
-      </div>
-      <div class="progress-title">Trabajo en Equipo</div>
-      <div class="progress">
-        <div
-          class="progress-bar bar"
-          role="progressbar"
-          style="width: 90%"
-        ></div>
-        <span style="color: black; margin: auto">90%</span>
-      </div>
-      <div class="progress-title">Responsabilidad</div>
-      <div class="progress">
-        <div
-          class="progress-bar bar"
-          role="progressbar"
-          style="width: 85%"
-        ></div>
-        <span style="color: black; margin: auto">85%</span>
-      </div>
+      <a class="card-link" role="button" routerLink="/edit-habilidades/{{Habilidad.id}}" *ngIf="isLogged"><i class="fas fa-pencil-alt"></i>Editar</a>
+      <a class="card-link" (click)="delete(Habilidad.id)" *ngIf="isLogged"><i class="fas fa-skull-crossbones"></i>Eliminar</a>
     </div>
     <!-- End: Progress Bars Chart -->
   </div>
