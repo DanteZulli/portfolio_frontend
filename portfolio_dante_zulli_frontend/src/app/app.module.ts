@@ -27,6 +27,7 @@ import { NewEducacionComponent } from './components/mis-estudios/new-educacion.c
 import { EditEducacionComponent } from './components/mis-estudios/edit-educacion.component';
 import { EditHabilidadesComponent } from './components/mis-habilidades/edit-habilidades.component';
 import { NewHabilidadesComponent } from './components/mis-habilidades/new-habilidades.component';
+import { EditHeaderComponent } from './components/header/edit-header.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { NewHabilidadesComponent } from './components/mis-habilidades/new-habili
     NewEducacionComponent,
     EditEducacionComponent,
     EditHabilidadesComponent,
-    NewHabilidadesComponent
+    NewHabilidadesComponent,
+    EditHeaderComponent
   ],
   imports: [
     BrowserModule,

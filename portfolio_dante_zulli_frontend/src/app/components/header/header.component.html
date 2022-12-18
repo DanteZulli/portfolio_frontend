@@ -13,7 +13,7 @@
       class="container d-flex flex-column justify-content-end align-items-start"
     >
       <img
-        src="assets/img/ambaruli.jpg"
+        src={{persona.img}}}
         style="
           border-radius: 100%;
           max-height: 10rem;
@@ -25,6 +25,8 @@
       <p class="fs-2 text-info text-badge mb-5">
         "Full Stack Developer Jr"
       </p>
+      <a class="btn btn-dark btn-lg text-uppercase fw-bold text-center" role="button" routerLink="/edit-header/1" *ngIf="isLogged" style="display: inline;">editar perfil&nbsp;<i class="fas fa-pencil-alt"></i></a>
+      <br><br>
     </div>
   </div>
   <!-- End: Parallax Background -->
