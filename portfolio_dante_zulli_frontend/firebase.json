@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/portfolio_dante_zulli",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
