@@ -9,6 +9,7 @@ import { EditEducacionComponent } from './components/mis-estudios/edit-educacion
 import { NewEducacionComponent } from './components/mis-estudios/new-educacion.component';
 import { EditHabilidadesComponent } from './components/mis-habilidades/edit-habilidades.component';
 import { NewHabilidadesComponent } from './components/mis-habilidades/new-habilidades.component';
+import { EditSobreMiComponent } from './components/sobre-mi/edit-sobre-mi.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path:'edit-educacion/:id', component:EditEducacionComponent},
   {path:'new-habilidades', component:NewHabilidadesComponent},
   {path:'edit-habilidades/:id', component:EditHabilidadesComponent},
-  {path:'edit-header/1', component:EditHeaderComponent}
+  {path:'edit-header/1', component:EditHeaderComponent},
+  {path:'edit-sobre-mi/1', component:EditSobreMiComponent}
 
 ];
 

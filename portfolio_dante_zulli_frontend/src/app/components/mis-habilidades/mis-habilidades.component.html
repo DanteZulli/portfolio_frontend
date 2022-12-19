@@ -9,7 +9,7 @@
         <div
           class="progress-bar bar"
           role="progressbar"
-          style="width: 50%;"
+          [style]="{ width: Habilidad.porcentaje + '%' }"
         ></div>
         <span style="color: black; margin: auto">{{ Habilidad.porcentaje }}%</span>
       </div>

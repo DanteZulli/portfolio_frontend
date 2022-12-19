@@ -14,6 +14,9 @@
             <label for="img">Imagen</label>
             <input type="file" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persona.img" (change)="uploadImage($event)" accept=".png, .jpg, .jpeg">
           </div>
+          <div class="imagen">
+            <img [src]="imageService.url" width="200px">
+          </div>
           <button type="submit" class="btn btn-dark btn-lg text-uppercase fw-bold text-center">Editar Perfil<i class="fas fa-pencil-alt"></i></button>
         </form>
       </div>

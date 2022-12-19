@@ -1,8 +1,8 @@
 <section class="py-4">
   <div class="container">
+    <a class="btn btn-dark btn-lg text-uppercase fw-bold text-center mb-5" role="button" routerLink="/edit-sobre-mi/1" *ngIf="isLogged" style="display: inline;">editar descripcion&nbsp;<i class="fas fa-pencil-alt"></i></a>
     <p class="fs-3" id="sobre-mi">
-      <br />Hola! Me llamo Dante Zulli. Soy un Programador y Desarrollador
-      Web entusiasta e independiente.<br /><br />
+      <br />{{persona.descripcion}}<br /><br />
     </p>
     <ul class="list-inline mb-0">
       <li class="list-inline-item">
