@@ -9,6 +9,8 @@ import { EditEducacionComponent } from './components/mis-estudios/edit-educacion
 import { NewEducacionComponent } from './components/mis-estudios/new-educacion.component';
 import { EditHabilidadesComponent } from './components/mis-habilidades/edit-habilidades.component';
 import { NewHabilidadesComponent } from './components/mis-habilidades/new-habilidades.component';
+import { EditProyectosComponent } from './components/mis-proyectos/edit-proyectos.component';
+import { NewProyectosComponent } from './components/mis-proyectos/new-proyectos.component';
 import { EditSobreMiComponent } from './components/sobre-mi/edit-sobre-mi.component';
 
 const routes: Routes = [
@@ -21,7 +23,10 @@ const routes: Routes = [
   {path:'new-habilidades', component:NewHabilidadesComponent},
   {path:'edit-habilidades/:id', component:EditHabilidadesComponent},
   {path:'edit-header/1', component:EditHeaderComponent},
-  {path:'edit-sobre-mi/1', component:EditSobreMiComponent}
+  {path:'edit-sobre-mi/1', component:EditSobreMiComponent},
+  {path:'new-proyectos', component:NewProyectosComponent},
+  {path:'edit-proyectos/:id', component:EditProyectosComponent}
+
 
 ];
 

@@ -32,6 +32,8 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { EditSobreMiComponent } from './components/sobre-mi/edit-sobre-mi.component';
+import { NewProyectosComponent } from './components/mis-proyectos/new-proyectos.component';
+import { EditProyectosComponent } from './components/mis-proyectos/edit-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { EditSobreMiComponent } from './components/sobre-mi/edit-sobre-mi.compon
     EditHabilidadesComponent,
     NewHabilidadesComponent,
     EditHeaderComponent,
-    EditSobreMiComponent
+    EditSobreMiComponent,
+    NewProyectosComponent,
+    EditProyectosComponent
   ],
   imports: [
     BrowserModule,

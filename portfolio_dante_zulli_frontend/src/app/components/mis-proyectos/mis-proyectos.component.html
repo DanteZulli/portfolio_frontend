@@ -1,8 +1,9 @@
 <section class="py-4">
   <div class="container">
     <h2 class="text-center">Mis proyectos</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 py-5 projects">
-      <div class="col">
+    <a class="btn btn-dark btn-lg text-uppercase fw-bold text-center" role="button" routerLink="/new-proyectos" *ngIf="isLogged" style="display: inline;">agregar proyecto&nbsp;<i class="fas fa-plus"></i></a>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 py-5 projects" >
+      <div class="col" *ngFor="let Proyecto of proyectos">
         <div class="card">
           <img
             class="card-img w-100 d-block"
@@ -17,144 +18,16 @@
                 border-color: var(--bs-primary);
               "
             >
-              Proyecto Ejemplo
+              {{Proyecto.nombreProyecto}}
             </h4>
             <p
               class="text-center"
               style="background: var(--bs-gray-900); border-radius: 10px"
             >
-              Este es un proyecto de ejemplo
+              {{Proyecto.descripcionProyecto}}
             </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img
-            class="card-img w-100 d-block"
-            src="assets/img/pexels-designecologist-1779487.jpg"
-          />
-          <div class="card-img-overlay">
-            <h4
-              class="text-center"
-              style="
-                background: var(--bs-primary);
-                border-radius: 10px;
-                border-color: var(--bs-primary);
-              "
-            >
-              Proyecto Ejemplo
-            </h4>
-            <p
-              class="text-center"
-              style="background: var(--bs-gray-900); border-radius: 10px"
-            >
-              Este es un proyecto de ejemplo
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img
-            class="card-img w-100 d-block"
-            src="assets/img/pexels-josh-sorenson-1714208.jpg"
-          />
-          <div class="card-img-overlay">
-            <h4
-              class="text-center"
-              style="
-                background: var(--bs-primary);
-                border-radius: 10px;
-                border-color: var(--bs-primary);
-              "
-            >
-              Proyecto Ejemplo
-            </h4>
-            <p
-              class="text-center"
-              style="background: var(--bs-gray-900); border-radius: 10px"
-            >
-              Este es un proyecto de ejemplo
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img
-            class="card-img w-100 d-block"
-            src="assets/img/pexels-mateusz-dach-450035.jpg"
-          />
-          <div class="card-img-overlay">
-            <h4
-              class="text-center"
-              style="
-                background: var(--bs-primary);
-                border-radius: 10px;
-                border-color: var(--bs-primary);
-              "
-            >
-              Proyecto Ejemplo
-            </h4>
-            <p
-              class="text-center"
-              style="background: var(--bs-gray-900); border-radius: 10px"
-            >
-              Este es un proyecto de ejemplo
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img
-            class="card-img w-100 d-block"
-            src="assets/img/pexels-pixabay-459653.jpg"
-          />
-          <div class="card-img-overlay">
-            <h4
-              class="text-center"
-              style="
-                background: var(--bs-primary);
-                border-radius: 10px;
-                border-color: var(--bs-primary);
-              "
-            >
-              Proyecto Ejemplo
-            </h4>
-            <p
-              class="text-center"
-              style="background: var(--bs-gray-900); border-radius: 10px"
-            >
-              Este es un proyecto de ejemplo
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img
-            class="card-img w-100 d-block"
-            src="assets/img/pexels-soumil-kumar-735911.jpg"
-          />
-          <div class="card-img-overlay">
-            <h4
-              class="text-center"
-              style="
-                background: var(--bs-primary);
-                border-radius: 10px;
-                border-color: var(--bs-primary);
-              "
-            >
-              Proyecto Ejemplo
-            </h4>
-            <p
-              class="text-center"
-              style="background: var(--bs-gray-900); border-radius: 10px"
-            >
-              Este es un proyecto de ejemplo
-            </p>
+            <a class="card-link" role="button" routerLink="/edit-proyectos/{{Proyecto.id}}" *ngIf="isLogged"><i class="fas fa-pencil-alt"></i>Editar</a>
+            <a class="card-link" (click)="delete(Proyecto.id)" *ngIf="isLogged"><i class="fas fa-skull-crossbones"></i>Eliminar</a>
           </div>
         </div>
       </div>
