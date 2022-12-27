@@ -42,6 +42,6 @@ export class EditHeaderComponent implements OnInit {
     );
   }
   uploadImage($event: any) {
-    this.imageService.uploadImage($event);
+    this.imageService.uploadImage($event, "perfil");
   }
 }

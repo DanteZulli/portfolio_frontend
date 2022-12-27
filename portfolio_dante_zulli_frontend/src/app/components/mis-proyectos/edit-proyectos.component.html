@@ -12,7 +12,10 @@
         </div>
         <div class="form-group">
           <label for="imagenProyecto">Imagen Proyecto</label>
-          <input type="text" class="form-control" id="imagenProyecto" name="imagenProyecto" [(ngModel)]="proyectos.imagenProyecto" required>
+          <input type="file" class="form-control" id="imagenProyecto" name="imagenProyecto" [(ngModel)]="proyectos.imagenProyecto" (change)="uploadImage($event)" accept=".png, .jpg, .jpeg">
+        </div>
+        <div>
+          <img [src]="imageService.url" width="200px">
         </div>
         <button type="submit" class="btn btn-dark btn-lg text-uppercase fw-bold text-center">Actualizar Proyecto<i class="fas fa-pencil-alt"></i></button>
       </form>

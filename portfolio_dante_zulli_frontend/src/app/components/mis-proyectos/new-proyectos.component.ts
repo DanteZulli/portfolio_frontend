@@ -20,6 +20,7 @@ export class NewProyectosComponent implements OnInit {
   }
 
   onCreate(): void {
+    this.imagenProyecto = "assets/img/pexels-christina-morillo-1181675.jpg"
     const proyecto = new Proyectos(this.nombreProyecto, this.descripcionProyecto, this.imagenProyecto);
     this.ProyectosService.guardar(proyecto).subscribe(
       data => {
