@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  URL: 'http://my-prod-url'
+  URL: 'portfoliobackend-production-57ad.up.railway.app'
 };
