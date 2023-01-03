@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Persona } from '../model/persona.model';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = environment.URL + 'personas/';
+  URL = 'https://portfolio-backend-kym8.onrender.com' + '/personas/';
 
   constructor(private httpClient: HttpClient) { }
 

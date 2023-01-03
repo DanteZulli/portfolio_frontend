@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  URL: 'portfoliobackend-production-57ad.up.railway.app'
+  URL: 'https://portfolio-backend-kym8.onrender.com'
 };

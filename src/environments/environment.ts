@@ -9,6 +9,6 @@ export const environment = {
     messagingSenderId: '667454008298',
     measurementId: 'G-6E7P48BZC9',
   },
-  production: false,
-  URL: 'http://localhost:8080/'
+  production: true,
+  URL: 'https://portfolio-backend-kym8.onrender.com'
 };

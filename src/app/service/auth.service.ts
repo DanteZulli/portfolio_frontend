@@ -4,13 +4,12 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 import { JwtDto } from '../model/jwt-dto';
 import { LoginUsuario } from '../model/login-usuario';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = environment.URL + 'auth/';
+  authURL = 'https://portfolio-backend-kym8.onrender.com' + '/auth/';
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {

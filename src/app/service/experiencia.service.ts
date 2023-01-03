@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Experiencia } from '../model/experiencia';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExperienciaService {
-  expURL = environment.URL + 'explab/';
+  expURL = 'https://portfolio-backend-kym8.onrender.com' + '/explab/';
   constructor(private httpClient: HttpClient) { }
   public lista(): Observable<Experiencia[]> {
     return this.httpClient.get<Experiencia[]>(this.expURL + "lista");
