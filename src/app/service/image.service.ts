@@ -16,7 +16,7 @@ export class ImageService {
       .then(response => {this.getProfileImages()})
       .catch(error => console.log(error))
     }else{
-      const imgRef = ref(this.storage, 'imagen/' + name);
+      const imgRef = ref(this.storage, 'imagenesProyectos/' + name);
       uploadBytes(imgRef, file)
       .then(response => {this.getImages()})
       .catch(error => console.log(error))
@@ -24,7 +24,7 @@ export class ImageService {
   }
 
   getImages(){
-    const imagesRef = ref(this.storage, 'imagen');
+    const imagesRef = ref(this.storage, 'imagenesProyectos');
     list(imagesRef)
     .then(async response => {
       for(let item of response.items){
