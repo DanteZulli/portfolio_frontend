@@ -7,7 +7,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'https://portfolio-backend-kym8.onrender.com' + '/educacion/';
+  URL = 'https://portfolio-backend-km58.onrender.com' + '/educacion/';
   constructor(private httpClient : HttpClient) { }
 
   public lista(): Observable<Educacion[]>{

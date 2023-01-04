@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'https://portfolio-backend-kym8.onrender.com' + '/personas/';
+  URL = 'https://portfolio-backend-km58.onrender.com' + '/personas/';
 
   constructor(private httpClient: HttpClient) { }
 

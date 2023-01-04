@@ -7,7 +7,7 @@ import { Proyectos } from '../model/proyectos';
   providedIn: 'root',
 })
 export class ProyectosService {
-  URL = 'https://portfolio-backend-kym8.onrender.com' + '/proyectos/';
+  URL = 'https://portfolio-backend-km58.onrender.com' + '/proyectos/';
   constructor(private httpClient: HttpClient) {}
 
   public lista(): Observable<Proyectos[]> {

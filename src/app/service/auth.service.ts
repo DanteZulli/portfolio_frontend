@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'https://portfolio-backend-kym8.onrender.com' + '/auth/';
+  authURL = 'https://portfolio-backend-km58.onrender.com' + '/auth/';
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {

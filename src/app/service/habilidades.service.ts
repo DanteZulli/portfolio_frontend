@@ -7,7 +7,7 @@ import { Habilidades } from '../model/habilidades';
   providedIn: 'root'
 })
 export class HabilidadesService {
-  URL = 'https://portfolio-backend-kym8.onrender.com' + '/habilidades/';
+  URL = 'https://portfolio-backend-km58.onrender.com' + '/habilidades/';
   constructor(private httpClient: HttpClient) { }
   public lista(): Observable<Habilidades[]> {
     return this.httpClient.get<Habilidades[]>(this.URL + "lista");

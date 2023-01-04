@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  expURL = 'https://portfolio-backend-kym8.onrender.com' + '/explab/';
+  expURL = 'https://portfolio-backend-km58.onrender.com' + '/explab/';
   constructor(private httpClient: HttpClient) { }
   public lista(): Observable<Experiencia[]> {
     return this.httpClient.get<Experiencia[]>(this.expURL + "lista");

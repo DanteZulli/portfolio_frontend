@@ -10,5 +10,5 @@ export const environment = {
     measurementId: 'G-6E7P48BZC9',
   },
   production: true,
-  URL: 'https://portfolio-backend-kym8.onrender.com'
+  URL: 'https://portfolio-backend-km58.onrender.com'
 };
